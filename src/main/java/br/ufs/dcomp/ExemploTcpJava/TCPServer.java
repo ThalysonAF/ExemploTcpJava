@@ -28,6 +28,13 @@ public class TCPServer{
             is.read(buf); // Operação bloqueante (aguardando chegada de dados)
             System.out.println("[OK] ]");
             
+            //Devolver resposta
+            String msg2 = "Olá, Cliente!!!";
+            byte[] buf2 = msg2.getBytes();
+            System.out.print("[ Enviando resposta    ..............................  ");
+            os.write(buf2);
+            System.out.println("[OK] ]");
+            
             //Mapeia para unicode-16
             String msg = new String(buf); // Mapeando vetor de bytes recebido para String
             
