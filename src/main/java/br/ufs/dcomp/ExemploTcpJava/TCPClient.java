@@ -9,6 +9,7 @@ public class TCPClient{
     public static void main(String[] args){
         try {
             System.out.print("[ Conectando com o Servidor TCP    ..................  ");
+            //Criação do socket e pedido da conexão (ip e porta do servidor :linha17 em TCPServer)
             Socket sock = new Socket("127.0.0.1", 3300);
             System.out.println("[OK] ]");
             
